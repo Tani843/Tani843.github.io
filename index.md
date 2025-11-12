@@ -1,33 +1,34 @@
 ---
 layout: default
-title: Abhishek Tiwari
+title: Tanisha Gupta
 ---
 
 <div class="landing-container">
     <!-- Header Section -->
     <header class="landing-header">
-        <h1>Abhishek Tiwari</h1>
-        <p class="header-subtitle">PhD Applicant in Computer Science</p>
-        <p class="header-focus">Advancing Neuro-Symbolic AI & Explainable AI Systems</p>
+        <h1>Tanisha Gupta</h1>
+        <p class="header-subtitle">PhD Applicant in Applied Mathematics</p>
+        <p class="header-focus">Advancing Bayesian Inverse Problems · Scientific Computing · Uncertainty Quantification</p>
     </header>
 
    <!-- About Me Section -->
 <section class="about-section">
     <div class="about-content">
-        <p>I am advancing the frontier of Artificial Intelligence through <strong>Neuro-Symbolic AI</strong> developing systems that combine the pattern recognition power of neural networks with the explicit reasoning of symbolic AI. My research creates AI that doesn't just predict, but understands and explains its decisions.</p>
+         <p>I am a researcher in <strong>Applied Mathematics</strong> and <strong>Scientific Computing</strong>, focusing on the intersection of <strong>Bayesian inverse problems</strong>, <strong>PAC-Bayesian learning theory</strong>, and <strong>partial differential equations (PDEs)</strong>. My ongoing work develops <em>finite-sample generalization frameworks</em> for PDE-governed inverse problems, bridging rigorous mathematics with data-driven inference.</p>
         
-        <p>My background in Business Analytics provides a unique perspective, grounding theoretical advances in real-world applications where trust and reliability are paramount. I am seeking PhD positions starting Fall 2026 to pioneer the next generation of interpretable, trustworthy AI systems.</p>
+        <p>I hold a BSc in Mathematics (University of Delhi) and an MSc in Data Science (University of Liverpool, UK). I previously worked as a Business Intelligence Analyst at <strong>Allpay Ltd (UK)</strong>, applying quantitative and computational methods to real-world data systems. I am currently a <strong>Research Assistant at Janki Devi Memorial College, University of Delhi</strong>, working on applied mathematics research and computational modeling. I aim to pursue a PhD starting Fall 2026 in Applied Mathematics or Scientific Computing, focusing on uncertainty quantification and high-performance Bayesian inference.</p>
     </div>
 
-        <!-- Research Interests Only -->
-        <div class="interests-section">
-            <h3>Research Interests</h3>
-            <div class="interests-grid">
-                <span class="interest-tag">Neuro-Symbolic AI</span>
-                <span class="interest-tag">Explainable AI (XAI)</span>
-                <span class="interest-tag">Trustworthy Machine Learning</span>
-                <span class="interest-tag">Automated Reasoning</span>
-                <span class="interest-tag">AI for Decision-Making</span>
+        <!-- Research Interests -->
+      <div class="interests-section">
+          <h3>Research Interests</h3>
+          <div class="interests-grid">
+              <span class="interest-tag">Bayesian Inverse Problems</span>
+              <span class="interest-tag">Uncertainty Quantification</span>
+              <span class="interest-tag">PAC-Bayesian Learning</span>
+              <span class="interest-tag">Scientific Computing</span>
+              <span class="interest-tag">Numerical Analysis</span>
+              <span class="interest-tag">PDE-Constrained Optimization</span>
             </div>
         </div>
     </section>
@@ -35,9 +36,9 @@ title: Abhishek Tiwari
     <!-- Quick Navigation -->
     <section class="nav-section">
         <div class="nav-buttons">
-            <a href="/Abhishek.Tiwari/publications" class="nav-btn">Publications</a>
-            <a href="/Abhishek.Tiwari/projects" class="nav-btn">Projects</a>
-            <a href="/Abhishek.Tiwari/research" class="nav-btn">Research</a>
+            <a href="/projects" class="nav-btn">Projects</a>
+          <a href="/publications" class="nav-btn">Publications</a>
+          <a href="/cv" class="nav-btn">CV</a>
         </div>
     </section>
 
@@ -51,13 +52,13 @@ title: Abhishek Tiwari
                 <button onclick="zoomInCV()" class="cv-control-btn">Zoom In</button>
                 <button onclick="zoomOutCV()" class="cv-control-btn">Zoom Out</button>
                 <button onclick="resetZoomCV()" class="cv-control-btn">Reset Zoom</button>
-                <a href="https://abhishek282001tiwari.github.io/Abhishek.Tiwari/assets/cv/cv.pdf" download class="cv-download-btn">Download PDF</a>
+                <a href="/assets/cv.pdf" download class="cv-download-btn">Download PDF</a>
             </div>
             
             <div class="pdf-viewer">
                 <iframe 
                     id="cv-pdf"
-                    src="https://abhishek282001tiwari.github.io/Abhishek.Tiwari/assets/cv/cv.pdf#view=FitH"
+                    src="/assets/cv.pdf#view=FitH"
                     width="100%" 
                     height="500"
                     frameborder="0"
@@ -71,9 +72,9 @@ title: Abhishek Tiwari
     <section class="contact-section">
         <h3>Get in Touch</h3>
         <div class="contact-links">
-            <a href="mailto:abhishekt282001@gmail.com" class="contact-link">Email</a>
-            <a href="https://github.com/Abhishek282001Tiwari" target="_blank" class="contact-link">GitHub</a>
-            <a href="[Your LinkedIn URL]" target="_blank" class="contact-link">LinkedIn</a>
+            <a href="mailto:tanishagupta008@gmail.com" class="contact-link">Email</a>
+            <a href="https://github.com/Tani843" target="_blank" class="contact-link">GitHub</a>
+            <a href="https://www.linkedin.com/in/tanishagupta008/" target="_blank" class="contact-link">LinkedIn</a>
         </div>
     </section>
 </div>
