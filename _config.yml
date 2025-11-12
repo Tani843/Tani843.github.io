@@ -1,8 +1,8 @@
-title: "Abhishek Tiwari"
-email: "abhishekt282001@gmail.com"
-description: "Neuro-Symbolic AI Research"
-baseurl: "/Abhishek.Tiwari"
-url: "https://abhishek282001tiwari.github.io"  # ❌ REMOVE "/Abhishek.Tiwari" from here
+title: "Tanisha Gupta"
+email: "tanishagupta008@gmail.com"
+description: "Applied Mathematics Research"
+baseurl: "
+url: "https://tani843.github.io"  # ❌ REMOVE "/Abhishek.Tiwari" from here
 
 theme: minima
 plugins:
