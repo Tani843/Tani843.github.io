@@ -13,13 +13,27 @@ Peer-reviewed research papers and preprints in Bayesian Inverse Problems, Uncert
 <div class="publication featured">
     <div class="pub-header">
         <h3>PAC-Bayes Certificates for Bayesian Inverse Problems: A Case Study on the Heat Equation</h3>
-        <span class="pub-status">Preprint • 2025</span>
+        <span class="pub-status">Preprint • 2025 (Under Review at SIAM JUQ)</span>
     </div>
 
     <p class="pub-authors">Tanisha Gupta</p>
 
     <p class="pub-abstract">
-        This work introduces the first PAC-Bayes generalization framework for Bayesian inverse problems governed by partial differential equations (PDEs). Using the 1-D heat equation as a case study, the paper establishes finite-sample, distribution-free guarantees for Bayesian posterior estimators. The analysis is mesh-robust, computationally efficient, and bridges statistical learning theory with classical PDE-based inference. The manuscript is currently under peer review at the <strong>SIAM/ASA Journal on Uncertainty Quantification (JUQ)</strong>.
+        Modern Bayesian inverse methods for PDEs provide posterior distributions and credible intervals but no 
+        <strong>finite-sample guarantees</strong> for prediction on new sensor data. This paper introduces the 
+        first <strong>PAC-Bayes generalization framework for Bayesian inverse PDEs</strong>, using thermal 
+        conductivity inference in the 1-D heat equation as a case study. By exploiting the Gibbs–posterior view 
+        and a <strong>sigmoid-bounded squared loss</strong>, we derive <strong>mesh-robust PAC-Bayes certificates</strong> 
+        that separate statistical generalization error from numerical discretization bias.
+        <br><br>
+        Across <strong>1,728 experimental configurations</strong> spanning sensor counts, noise levels, 
+        temperature regimes, and mesh resolutions, all certificates satisfy 
+        <code>Bλ ≥ L̂</code>. The gap between empirical and certified risk remains typically 
+        <strong>3–12% (often 7–9%)</strong>, while the discretization penalty drops by <strong>≈4×</strong>
+        when refining the mesh from 50 to 100 points, confirming second-order accuracy. These results demonstrate 
+        that PAC-Bayes provides <strong>conservative yet practical reliability guarantees</strong> for inverse PDE 
+        models—flagging overconfident posteriors under sparse sensing or high noise—and serving as a 
+        <strong>modular safety layer</strong> for existing Bayesian solvers.
     </p>
     <div class="pub-links">
         <a href="https://doi.org/10.36227/techrxiv.176170993.37005709/v1" class="pub-link">Paper</a>
