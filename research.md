@@ -88,9 +88,9 @@ permalink: /research/
 <div class="project-results">
     <h4>Long-term Impact</h4>
     <p>
-        My long-term research objective is to develop mathematically rigorous and computationally scalable frameworks for Bayesian inference in complex scientific systems. I aim to contribute to the next generation of uncertainty quantification methods that provide provable guarantees, remain stable under mesh refinement, and integrate seamlessly with large-scale PDE-based models.
+        My long-term research goal is to develop mathematically rigorous and computationally scalable frameworks for Bayesian inference and uncertainty quantification in complex scientific systems. I aim to contribute to a new class of reliable scientific models that remain stable under discretization, provide provable generalization guarantees, and integrate seamlessly with large-scale PDE-based simulations.
         <br><br>
-        In the broader scope, I hope to advance the theoretical foundations and practical tools required for reliable scientific computing—enabling predictive models in engineering, climate science, and the physical sciences to operate with quantifiable confidence. Through doctoral research beginning in Fall 2026, I intend to work at the intersection of numerical analysis, Bayesian inference, and learning theory to create trustworthy, high-impact methodologies for real-world decision-making.
+        At a broader level, my work is motivated by the need for trustworthy computational tools in science and engineering—methods that combine statistical robustness with numerical precision. I aspire to advance the theoretical foundations and practical algorithms that enable transparent, reproducible, and high-confidence decision-making in high-dimensional, noisy, and uncertain environments.
     </p>
 </div>
 </div>
