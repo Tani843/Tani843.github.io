@@ -58,7 +58,7 @@ title: Tanisha Gupta
             <div class="pdf-viewer">
                 <iframe 
                     id="cv-pdf"
-                    src="/assets/cv.pdf#view=FitH"
+                    src="/assets/cv/cv.pdf#view=FitH"
                     width="100%" 
                     height="500"
                     frameborder="0"
