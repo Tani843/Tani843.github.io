@@ -52,7 +52,7 @@ title: Tanisha Gupta
                 <button onclick="zoomInCV()" class="cv-control-btn">Zoom In</button>
                 <button onclick="zoomOutCV()" class="cv-control-btn">Zoom Out</button>
                 <button onclick="resetZoomCV()" class="cv-control-btn">Reset Zoom</button>
-                <a href="/assets/cv.pdf" download class="cv-download-btn">Download PDF</a>
+                <a href="/assets/cv/cv.pdf" download class="cv-download-btn">Download PDF</a>
             </div>
             
             <div class="pdf-viewer">
