@@ -6,48 +6,38 @@ permalink: /publications/
 
 # Publications
 
-Peer-reviewed research papers and preprints in Neuro-Symbolic AI and related fields.
+Peer-reviewed research papers and preprints in Bayesian Inverse Problems, Uncertainty Quantification, and Scientific Computing.
 
-## Featured Publications
+## Featured Publication
 
 <div class="publication featured">
     <div class="pub-header">
-        <h3>A Modular Neurosymbolic Framework for General-Purpose Reasoning: Bridging Symbolic and Deep Learning for Interpretable AI</h3>
-        <span class="pub-status">Preprint • 2024</span>
+        <h3>PAC-Bayes Certificates for Bayesian Inverse Problems: A Case Study on the Heat Equation</h3>
+        <span class="pub-status">Preprint • 2025</span>
     </div>
-    <p class="pub-authors">Abhishek Tiwari</p>
+
+    <p class="pub-authors">Tanisha Gupta</p>
+
     <p class="pub-abstract">
-        Modern AI systems excel at perception tasks yet continue to struggle with general-purpose reasoning and interpretability. We present NeuroLogicX, a modular neurosymbolic framework that demonstrates the potential for interpretable AI through its design, combining symbolic logic with deep learning components. Unlike task-specific hybrids, NeuroLogicX cleanly separates perception, reasoning, and explanation into independent modules, each connected via transparent interfaces. Our experimental evaluation on bAbI reasoning tasks shows that NeuroLogicX achieves competitive performance (94.2% accuracy) while maintaining complete reasoning transparency, outperforming pure neural baselines (87.3% accuracy) and rule-based systems (91.1% accuracy) with statistical significance (p<0.001).
+        This work introduces the first PAC-Bayes generalization framework for Bayesian inverse problems governed by partial differential equations (PDEs). Using the 1-D heat equation as a case study, the paper establishes finite-sample, distribution-free guarantees for Bayesian posterior estimators. The analysis is mesh-robust, computationally efficient, and bridges statistical learning theory with classical PDE-based inference. The manuscript is currently under peer review at the <strong>SIAM/ASA Journal on Uncertainty Quantification (JUQ)</strong>.
     </p>
     <div class="pub-links">
-        <a href="https://doi.org/10.36227/techrxiv.175295182.20276969/v1" class="pub-link">Paper</a>
-        <a href="https://github.com/Abhishek282001Tiwari/neurologicx_terminal" class="pub-link">Code</a>
-        <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=DyC5124AAAAJ" class="pub-link">Google Scholar</a>
+        <a href="https://doi.org/10.36227/techrxiv.176170993.37005709/v1" class="pub-link">Paper</a>
+        <<a href="https://github.com/Tani843/PAC_BAYES_INVERSE_PDE" class="pub-link">Code</a>
+        <a href="https://scholar.google.com/citations?user=QYQqZZgAAAAJ&hl=en" class="pub-link">Google Scholar</a>
     </div>
     <div class="pub-tags">
-        <span class="pub-tag">Neuro-Symbolic AI</span>
-        <span class="pub-tag">Interpretable AI</span>
-        <span class="pub-tag">Reasoning Systems</span>
-        <span class="pub-tag">Modular Architecture</span>
+        <span class="pub-tag">Bayesian Inverse Problems</span>
+        <span class="pub-tag">Uncertainty Quantification</span>
+        <span class="pub-tag">PAC-Bayes Theory</span>
+        <span class="pub-tag">Scientific Computing</span>
+        <span class="pub-tag">PDEs</span>
     </div>
 </div>
 
-## Manuscripts in Preparation
 
-<div class="manuscripts-section">
-    <div class="manuscript-item">
-        <strong>Optimal Execution under Self-Exciting Order Flow: A Stochastic Control Framework</strong><br>
-        <span class="manuscript-target">Target: Quantitative Finance Journal</span>
-    </div>
-    <div class="manuscript-item">
-        <strong>Multi-Regime Climate-Financial Risk Transmission Engine</strong><br>
-        <span class="manuscript-target">Target: Climate Risk Journal</span>
-    </div>
-</div>
 
----
-
-*For collaboration inquiries or early access to preprints, please <a href="mailto:abhishekt282001@gmail.com">contact me</a>.*
+*For collaboration inquiries or early access to preprints, please <a href="mailto:tanishagupta008@gmail.com">contact me</a>.*
 
 <style>
 .publication {
