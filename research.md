@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Research Vision  # Updated
+title: Research Vision
 permalink: /research/
 ---
 
@@ -8,34 +8,37 @@ permalink: /research/
 
 <div class="project featured">
     <div class="project-header">
-        <h3>Research Focus: Neuro-Symbolic AI</h3>
+        <h3>Research Focus: Bayesian Inverse Problems & Uncertainty Quantification</h3>
         <span class="project-status">Active Research</span>
     </div>
     
     <div class="project-meta">
-        <span class="project-tech">Artificial Intelligence • Machine Learning • Reasoning Systems</span>
+        <span class="project-tech">Applied Mathematics • Scientific Computing • PAC-Bayesian Learning</span>
     </div>
     
     <p class="project-description">
-        My research focuses on bridging the gap between neural networks and symbolic AI through Neuro-Symbolic AI - creating systems that combine the learning power of neural networks with the reasoning capabilities of symbolic AI.
+        My research is centered on <strong>Bayesian inverse problems</strong> and <strong>uncertainty quantification</strong> for systems governed by <strong>partial differential equations (PDEs)</strong>. I am particularly interested in developing <em>PAC-Bayesian generalization frameworks</em> for PDE-based inverse problems, providing finite-sample guarantees on predictive error and bridging modern learning theory with classical numerical analysis.
     </p>
 
     <div class="project-features">
-        <h4>The Challenge with Current AI</h4>
+        <h4>The Challenge with Bayesian Inversion</h4>
         <ul>
-            <li><strong>Neural Networks</strong> excel at pattern recognition but operate as "black boxes" - they can identify a cat in a photo but cannot explain why it's a cat</li>
-            <li><strong>Symbolic AI</strong> excels at logical reasoning and can provide clear explanations, but cannot learn from data or handle uncertainty well</li>
+            <li><strong>Ill-posedness:</strong> small perturbations in noisy data can lead to large changes in inferred parameters.</li>
+            <li><strong>High-dimensional posteriors:</strong> PDE-based models often require estimating spatially varying fields or many parameters, making sampling and inference computationally expensive.</li>
+            <li><strong>Lack of finite-sample guarantees:</strong> classical Bayesian methods yield credible intervals, but rarely provide <em>distribution-free</em> guarantees on predictive error for new observations.</li>
+            <li><strong>Mesh and discretization effects:</strong> numerical choices (grid size, time step) can significantly affect posterior behavior and stability.</li>
         </ul>
     </div>
 
     <div class="project-results">
         <h4>Why This Matters</h4>
-        <p>Consider a self-driving car approaching an obstacle:</p>
+        <p>These challenges appear in many real-world systems:</p>
         <ul>
-            <li>A pure neural network might recognize "object ahead" but not understand the implications</li>
-            <li>A pure symbolic system knows the rules "obstacles should be avoided" but can't identify the obstacle</li>  
-            <li>A neuro-symbolic system can both <strong>recognize</strong> the obstacle and <strong>reason</strong> about the appropriate response</li>
+            <li><strong>Heat and diffusion processes:</strong> inferring thermal conductivity or diffusion coefficients from sparse temperature measurements.</li>
+            <li><strong>Subsurface and environmental modelling:</strong> determining material properties of soil or rock from indirect data.</li>
+            <li><strong>Engineering and medical applications:</strong> reconstructing internal structures from boundary or sensor observations.</li>
         </ul>
+        <p>In such settings, we need methods that are not only accurate, but also come with <strong>provable guarantees</strong> on how well the inferred model will generalize to new data.</p>
     </div>
 </div>
 
@@ -46,38 +49,21 @@ permalink: /research/
     </div>
 
     <div class="project-features">
-        <h4>1. Neural-Symbolic Interfaces</h4>
-        <p>Developing methods to seamlessly translate between neural representations (patterns, probabilities) and symbolic representations (logic, rules).</p>
-        <p><strong>Key Question:</strong> How can we create interfaces that allow neural and symbolic components to communicate effectively while maintaining the strengths of both?</p>
+        <h4>1. PAC-Bayesian Certificates for Inverse PDE Problems</h4>
+        <p>I am developing a PAC-Bayesian framework for <strong>PDE-governed inverse problems</strong>, starting with the one-dimensional heat equation as a case study. The goal is to derive risk bounds that connect posterior distributions to out-of-sample prediction error in a mesh-robust way.</p>
+        <p><strong>Key Question:</strong> How can we obtain <em>finite-sample, distribution-free</em> guarantees for Bayesian inverse solutions in infinite-dimensional or high-dimensional PDE settings?</p>
     </div>
 
     <div class="project-features">
-        <h4>2. Efficient Symbolic Reasoning</h4>
-        <p>Traditional symbolic reasoning can be computationally expensive. I'm exploring optimizations to make logical reasoning practical for real-time applications.</p>
-        <p><strong>Key Question:</strong> What approximations and algorithmic improvements can make symbolic reasoning fast enough for real-world deployment?</p>
+        <h4>2. Numerical Methods for High-Dimensional Posteriors</h4>
+        <p>I am interested in numerical strategies that make Bayesian inversion more tractable, including Laplace approximations, Hessian-aware sampling, and careful discretization strategies that control the effect of mesh refinement on posterior behavior.</p>
+        <p><strong>Key Question:</strong> What combinations of numerical solvers and approximate inference schemes yield stable, reliable posteriors with controllable error in practical computation time?</p>
     </div>
 
     <div class="project-features">
-        <h4>3. Applications in Critical Domains</h4>
-        <p>I'm particularly interested in areas where AI explanations and reliability are essential:</p>
-        
-        <p><strong>Autonomous Systems</strong></p>
-        <ul>
-            <li>Robots and self-driving cars that can explain their decisions</li>
-            <li>Systems that can reason about safety constraints in real-time</li>
-        </ul>
-
-        <p><strong>High-Stakes Decision Making</strong></p>
-        <ul>
-            <li>Financial AI that can justify investment recommendations</li>  
-            <li>Medical systems that can trace diagnostic reasoning</li>
-        </ul>
-
-        <p><strong>Scientific AI</strong></p>
-        <ul>
-            <li>Systems that can formulate and test hypotheses</li>
-            <li>AI that can reason about causal relationships in complex data</li>
-        </ul>
+        <h4>3. Scientific Machine Learning & PDE-Constrained Learning</h4>
+        <p>Longer-term, I aim to explore hybrid approaches that combine physics-based PDE models with data-driven components, while retaining rigorous uncertainty quantification and theoretical guarantees.</p>
+        <p><strong>Key Question:</strong> How can we design learning algorithms that respect physical structure, provide calibrated uncertainty, and come with PAC-style generalization guarantees?</p>
     </div>
 </div>
 
@@ -88,21 +74,21 @@ permalink: /research/
     </div>
     
     <p class="project-description">
-        As AI becomes more integrated into our lives, the ability to understand and trust AI decisions becomes crucial. Neuro-Symbolic AI provides the foundation for trustworthy, collaborative, and adaptable AI systems.
+        As computational models become more complex and central to decision-making, the ability to <strong>trust</strong> their predictions becomes critical. My research vision is to build a bridge between <strong>learning theory</strong>, <strong>Bayesian statistics</strong>, and <strong>scientific computing</strong>, so that PDE-based models come with interpretable uncertainty and provable performance guarantees.
     </p>
 
     <div class="project-features">
         <h4>Research Objectives</h4>
         <ul>
-            <li><strong>Trustworthy AI</strong> - Systems whose decisions can be verified and validated</li>
-            <li><strong>Collaborative AI</strong> - Systems that can work alongside humans effectively</li>  
-            <li><strong>Adaptable AI</strong> - Systems that can apply learned knowledge to new situations</li>
+            <li><strong>Rigorous Uncertainty Quantification</strong> – developing methods that provide mathematically sound bounds on predictive risk for Bayesian inverse problems.</li>
+            <li><strong>Scalable Algorithms</strong> – designing numerical and probabilistic techniques that remain practical for high-dimensional and mesh-refined PDE systems.</li>
+            <li><strong>Physics-Aware Learning</strong> – integrating physical constraints and PDE structure into learning algorithms without sacrificing theoretical guarantees.</li>
         </ul>
     </div>
 
     <div class="project-results">
         <h4>Long-term Impact</h4>
-        <p>My research aims to make this vision practical and scalable, creating AI systems that are not just powerful, but understandable and reliable - advancing the frontier of reasoning machines through neural-symbolic integration.</p>
+        <p>My long-term goal is to contribute to a class of <strong>reliable scientific models</strong> that are both computationally efficient and theoretically justified. I aim to pursue a PhD starting <strong>Fall 2026</strong> in <strong>Applied Mathematics or Scientific Computing</strong>, working at the interface of numerical analysis, Bayesian inference, and learning theory to enable trustworthy decision-making in science and engineering.</p>
     </div>
 </div>
 
@@ -169,11 +155,6 @@ permalink: /research/
     font-size: 0.9rem;
 }
 
-.project-date {
-    color: #888;
-    font-size: 0.9rem;
-}
-
 .project-description {
     color: #333;
     line-height: 1.6;
@@ -203,7 +184,6 @@ permalink: /research/
     color: #333;
 }
 
-/* Changed from green checkmarks to black dots */
 .project-features li:before, .project-results li:before {
     content: "•";
     position: absolute;
@@ -211,27 +191,6 @@ permalink: /research/
     color: #000;
     font-weight: bold;
     font-size: 1.2rem;
-}
-
-.project-links {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.project-link {
-    display: inline-block;
-    padding: 0.5rem 1.2rem;
-    background: #000;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    transition: background 0.2s;
-}
-
-.project-link:hover {
-    background: #333;
 }
 
 @media (max-width: 768px) {
