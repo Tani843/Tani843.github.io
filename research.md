@@ -85,11 +85,14 @@ permalink: /research/
             <li><strong>Physics-Aware Learning</strong> – integrating physical constraints and PDE structure into learning algorithms without sacrificing theoretical guarantees.</li>
         </ul>
     </div>
-
-    <div class="project-results">
-        <h4>Long-term Impact</h4>
-        <p>My long-term goal is to contribute to a class of <strong>reliable scientific models</strong> that are both computationally efficient and theoretically justified. I aim to pursue a PhD starting <strong>Fall 2026</strong> in <strong>Applied Mathematics or Scientific Computing</strong>, working at the interface of numerical analysis, Bayesian inference, and learning theory to enable trustworthy decision-making in science and engineering.</p>
-    </div>
+<div class="project-results">
+    <h4>Long-term Impact</h4>
+    <p>
+        My long-term research objective is to develop mathematically rigorous and computationally scalable frameworks for Bayesian inference in complex scientific systems. I aim to contribute to the next generation of uncertainty quantification methods that provide provable guarantees, remain stable under mesh refinement, and integrate seamlessly with large-scale PDE-based models.
+        <br><br>
+        In the broader scope, I hope to advance the theoretical foundations and practical tools required for reliable scientific computing—enabling predictive models in engineering, climate science, and the physical sciences to operate with quantifiable confidence. Through doctoral research beginning in Fall 2026, I intend to work at the intersection of numerical analysis, Bayesian inference, and learning theory to create trustworthy, high-impact methodologies for real-world decision-making.
+    </p>
+</div>
 </div>
 
 </div>
