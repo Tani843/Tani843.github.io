@@ -8,201 +8,130 @@ permalink: /projects/
 
 # Research Implementation
 
-Published research projects with full codebase availability. Each implementation demonstrates novel methodologies in neuro-symbolic reasoning, financial modeling, and interpretable AI systems.
+Published research projects with full codebase availability. Each implementation demonstrates methods in Bayesian inverse problems, scientific computing, and high-dimensional sampling.
 
 ## Featured Projects
 
 <div class="project featured">
     <div class="project-header">
-        <h3>Safe Reinforcement Learning for Soft Robotics</h3>
+        <h3>PAC-Bayes Certificates for Bayesian Inverse PDEs</h3>
         <span class="project-status">Research Implementation</span>
     </div>
     <div class="project-meta">
-        <span class="project-tech">Python • PyTorch • Reinforcement Learning • Robotics</span>
-        <span class="project-date">2024</span>
+        <span class="project-tech">Python • Bayesian Inference • PAC-Bayes • PDE-Constrained Inverse Problems</span>
+        <span class="project-date">2025</span>
     </div>
     <p class="project-description">
-        A comprehensive research project implementing safe reinforcement learning algorithms for robust control of soft robots. Addresses the critical challenge of developing control policies that can handle complex, nonlinear dynamics of soft robotic systems while maintaining strict safety constraints.
+        End-to-end research codebase for the paper introducing PAC-Bayes generalization certificates for Bayesian inverse problems governed by partial differential equations. The implementation studies a 1D heat equation conductivity inverse problem and shows how to certify predictive risk for posterior-based estimators under mesh refinement and noisy data.
     </p>
     <div class="project-features">
         <h4>Research Contributions:</h4>
         <ul>
-            <li>Safe PPO algorithm with constrained policy optimization for soft robot control</li>
-            <li>Real-time safety monitoring with comprehensive constraint violation detection</li>
-            <li>Uncertainty quantification using Monte Carlo dropout and ensemble methods</li>
-            <li>Multi-robot validation across tentacle, gripper, and locomotion configurations</li>
-            <li>95% safety compliance with zero catastrophic failures in final evaluation</li>
+            <li>First PAC-Bayes framework applied to Bayesian inverse problems with PDE forward models (1D heat equation).</li>
+            <li>Mesh-robust certificates that separate discretization error from statistical generalization error.</li>
+            <li>Certificates defined on predictive risk, aligning guarantees with scientific quantities of interest rather than parameter error.</li>
+            <li>Systematic experiment grid (1,728 runs) across noise levels, sensor layouts, and priors with zero bound violations (no optimistic certificates).</li>
+            <li>Analysis of how posterior contraction, effective sample size, and mesh refinement interact with PAC-Bayes bounds.</li>
         </ul>
     </div>
     <div class="project-results">
         <h4>Technical Implementation:</h4>
         <ul>
-            <li>Physics-based simulation using PyBullet for high-fidelity soft body dynamics</li>
-            <li>Dual value functions for separate estimation of reward and cost values</li>
-            <li>Domain randomization for improved generalization and robustness</li>
-            <li>Real-time control at 50Hz with safety monitoring and emergency mechanisms</li>
-            <li>40% robustness improvement compared to standard reinforcement learning</li>
+            <li>Forward and adjoint solvers for the time-dependent heat equation with automatic gradient and Hessian construction.</li>
+            <li>MAP estimation and Laplace approximation around the posterior mode with low-rank Hessian structure exploited in practice.</li>
+            <li>Modular PAC-Bayes pipeline for computing KL terms, empirical risk, and certified risk for multiple priors and posteriors.</li>
+            <li>Fully scripted experiment runner that reproduces the paper’s figures, tables, and JSON logs from a single configuration.</li>
+            <li>Reproducible environment with pinned dependencies and deterministic seeds for all experiments.</li>
         </ul>
     </div>
     <div class="project-links">
-        <a href="https://github.com/Abhishek282001Tiwari/Learning_Robust_Control_Policies_for_Soft_Robots_using_Safe_Reinforcement_Learning" class="project-link">View Code</a>
-        <a href="https://github.com/Abhishek282001Tiwari/Learning_Robust_Control_Policies_for_Soft_Robots_using_Safe_Reinforcement_Learning/blob/main/README.md" class="project-link">Documentation</a>
+        <a href="https://github.com/Tani843/PAC_BAYES_INVERSE_PDE" class="project-link">View Code</a>
+        <a href="https://github.com/Tani843/PAC_BAYES_INVERSE_PDE/blob/main/README.md" class="project-link">Documentation</a>
+        <a href="https://doi.org/10.36227/techrxiv.176170993.37005709/v1" class="project-link">Research Paper</a>
     </div>
 </div>
 
 <div class="project featured">
     <div class="project-header">
-        <h3>Multi-Regime Climate-Financial Risk Transmission Engine</h3>
-        <span class="project-status">Research Project Complete</span>
+        <h3>Mixed-Precision Multigrid Solvers for PDEs</h3>
+        <span class="project-status">Research Implementation</span>
     </div>
     <div class="project-meta">
-        <span class="project-tech">Python • Markov Regime-Switching • Jump-Diffusion Models</span>
-        <span class="project-date">2024</span>
+        <span class="project-tech">Python • Multigrid Methods • Mixed Precision • Scientific Computing</span>
+        <span class="project-date">2025</span>
     </div>
     <p class="project-description">
-        Advanced climate-financial risk engine for modeling risk transmission using regime-switching and simulation-based techniques. Implements Hamilton's (1989) Markov regime-switching model with climate extensions to analyze how climate risks propagate through financial markets.
+        Experimental framework for studying mixed-precision multigrid solvers on elliptic PDEs. The project explores how assigning different floating-point precisions to grid levels and smoothers affects convergence rate, stability, and total computational cost.
     </p>
     <div class="project-features">
         <h4>Key Features:</h4>
         <ul>
-            <li>Implementation of Hamilton's Markov regime-switching model with climate extensions</li>
-            <li>Evidence of climate-financial transmission using 9+ years of real market data</li>
-            <li>Interactive Streamlit dashboard for real-time risk analysis and stress testing</li>
-            <li>Uses only FREE data sources, making it accessible worldwide</li>
+            <li>Configurable V-, W-, and F-cycle multigrid schemes with interchangeable smoothers and coarse-grid solvers.</li>
+            <li>Flexible precision assignment (e.g., single vs double) at each level to study accuracy–efficiency trade-offs.</li>
+            <li>Support for multiple benchmark PDE problems with different boundary conditions and grid sizes.</li>
+            <li>Automated convergence tracking via residual norms and estimated work units.</li>
+            <li>Clear separation between discretization, multigrid hierarchy, and precision policy for easy experimentation.</li>
         </ul>
     </div>
     <div class="project-results">
-        <h4>Technical Achievements:</h4>
+        <h4>Technical Implementation:</h4>
         <ul>
-            <li>Climate-triggered jump intensity modeling using Merton (1976) framework</li>
-            <li>Multi-regime detection with climate-dependent transition probabilities</li>
-            <li>Comprehensive VaR and Expected Shortfall calculations</li>
-            <li>Production-ready framework with extensive documentation</li>
+            <li>Structured Python implementation of grid transfer operators, smoothers, and coarse-grid corrections.</li>
+            <li>Vectorized linear algebra built on standard scientific Python libraries for reproducible experiments.</li>
+            <li>Config files to sweep over grid sizes, cycle types, and precision patterns without changing code.</li>
+            <li>Built-in plotting utilities for residual decay curves and cost–accuracy comparison across settings.</li>
+            <li>Jekyll-based documentation site summarizing algorithms, experiments, and design choices.</li>
         </ul>
     </div>
     <div class="project-links">
-        <a href="https://github.com/Abhishek282001Tiwari/Multi_Regime_Climate_Financial_Risk_Transmission_Engine" class="project-link">View Code</a>
-        <a href="https://github.com/Abhishek282001Tiwari/Multi_Regime_Climate_Financial_Risk_Transmission_Engine/blob/main/README.md" class="project-link">Documentation</a>
+        <a href="https://github.com/Tani843/Mixed_Precision_Multigrid_Solvers_for_PDEs" class="project-link">View Code</a>
+        <a href="https://github.com/Tani843/Mixed_Precision_Multigrid_Solvers_for_PDEs/blob/main/README.md" class="project-link">Documentation</a>
+        <a href="https://tani843.github.io/Mixed_Precision_Multigrid_Solvers_for_PDEs/" class="project-link">Live Demo</a>
     </div>
 </div>
 
 <div class="project featured">
     <div class="project-header">
-        <h3>Optimal Execution under Self-Exciting Order Flow</h3>
-        <span class="project-status">Research Project Complete</span>
-    </div>
-    <div class="project-meta">
-        <span class="project-tech">Python • Hawkes Processes • Stochastic Control • Jupyter</span>
-        <span class="project-date">2024</span>
-    </div>
-    <p class="project-description">
-        A novel optimal execution framework that integrates Hawkes processes with linear-quadratic stochastic control to model self-exciting order flow in financial markets. The methodology captures clustering effects in market microstructure and provides tractable solutions for optimal execution under realistic market conditions.
-    </p>
-    <div class="project-features">
-        <h4>Key Contributions:</h4>
-        <ul>
-            <li>First integration of Hawkes processes with LQ control for optimal execution</li>
-            <li>Parameters calibrated on real market data from 5 major stocks</li>
-            <li>8-15% cost reduction compared to traditional execution strategies</li>
-            <li>Fully reproducible codebase with comprehensive documentation</li>
-        </ul>
-    </div>
-    <div class="project-results">
-        <h4>Experimental Results:</h4>
-        <ul>
-            <li>Cost Reduction vs AC: 8-15% improvement</li>
-            <li>Market Regimes Tested: 3×3 parameter grid</li>
-            <li>Real Data Validation: 5 stocks, 1,255 trading days</li>
-            <li>Statistical Significance: p < 0.05 across tested scenarios</li>
-        </ul>
-    </div>
-    <div class="project-links">
-        <a href="https://github.com/Abhishek282001Tiwari/optimal-exec-hawkes" class="project-link">View Code</a>
-        <a href="https://github.com/Abhishek282001Tiwari/optimal-exec-hawkes/blob/main/README.md" class="project-link">Documentation</a>
-    </div>
-</div>
-
-<div class="project featured">
-    <div class="project-header">
-        <h3>NeuroLogicX: Interactive Reasoning Framework</h3>
+        <h3>Hessian-Aware Sampling in High Dimensions</h3>
         <span class="project-status">Research Implementation</span>
     </div>
     <div class="project-meta">
-        <span class="project-tech">Python • Streamlit • Neuro-Symbolic AI • Interactive Systems</span>
-        <span class="project-date">2024</span>
+        <span class="project-tech">Python • MCMC • Hessian-Based Preconditioning • High-Dimensional Sampling</span>
+        <span class="project-date">2025</span>
     </div>
     <p class="project-description">
-        An interactive demonstration framework implementing the NeuroLogicX architecture - a modular neuro-symbolic system that bridges symbolic logic with deep learning for interpretable AI. This terminal-style interface provides a tangible implementation of our research on transparent reasoning systems.
+        Research codebase investigating how local curvature information (Hessian and Hessian–vector products) can accelerate sampling in high-dimensional posteriors. The project benchmarks Hessian-aware samplers against vanilla MCMC on synthetic targets and inverse-problem-inspired posteriors.
     </p>
     <div class="project-features">
         <h4>Research Contributions:</h4>
         <ul>
-            <li>Modular architecture separating perception, reasoning, and explanation components</li>
-            <li>Integration of symbolic logic with neural representations for interpretable AI</li>
-            <li>Transparent interfaces enabling full auditability of reasoning processes</li>
-            <li>Competitive performance (94.2% accuracy) on bAbI reasoning tasks</li>
-            <li>Statistical significance (p<0.001) over pure neural and rule-based baselines</li>
+            <li>Comparison of standard random-walk and gradient-based samplers with Hessian-preconditioned variants.</li>
+            <li>Study of scaling behaviour of acceptance rates, effective sample size, and mixing as dimension grows.</li>
+            <li>Interfaces designed to plug in Hessian or Hessian–vector products from PDE-constrained inverse problems.</li>
+            <li>Diagnostics and visualizations highlighting when curvature information provides the most benefit.</li>
+            <li>Foundational experiments to inform future Hessian-aware inference for Bayesian inverse PDEs.</li>
         </ul>
     </div>
     <div class="project-results">
         <h4>Technical Implementation:</h4>
         <ul>
-            <li>Terminal-style interface demonstrating neuro-symbolic reasoning in action</li>
-            <li>Custom CSS framework for clean, research-focused presentation</li>
-            <li>Session management for persistent reasoning state and command history</li>
-            <li>Extensible architecture supporting additional reasoning modules</li>
-            <li>Web deployment enabling accessible demonstration of research concepts</li>
+            <li>Modular sampler implementations with a common API for target log-density, gradient, and curvature access.</li>
+            <li>Utilities for computing ESS, autocorrelation, and Gelman–Rubin-style diagnostics.</li>
+            <li>Experiment scripts for running controlled comparisons across families of Gaussian and posterior-like targets.</li>
+            <li>Configurable logging and plotting for chain trajectories, marginal histograms, and convergence metrics.</li>
+            <li>Static website summarizing experiments and main findings using the same Jekyll theme as the main portfolio.</li>
         </ul>
     </div>
     <div class="project-links">
-        <a href="https://github.com/Abhishek282001Tiwari/neurologicx_terminal" class="project-link">View Implementation</a>
-        <a href="https://github.com/Abhishek282001Tiwari/neurologicx_terminal/blob/main/README.md" class="project-link">Technical Docs</a>
-        <a href="https://doi.org/10.36227/techrxiv.175295182.20276969/v1" class="project-link">Research Paper</a>
-    </div>
-</div>
-
-<div class="project featured">
-    <div class="project-header">
-        <h3>Adaptive Multi-Fidelity Aerospace Optimization</h3>
-        <span class="project-status">Production Ready</span>
-    </div>
-    <div class="project-meta">
-        <span class="project-tech">Python • Multi-Fidelity Simulation • Bayesian Optimization • CFD</span>
-        <span class="project-date">2024</span>
-    </div>
-    <p class="project-description">
-        A cutting-edge aerospace optimization framework that achieves 85.7% computational cost reduction while maintaining superior solution quality through intelligent multi-fidelity simulation strategies. Implements adaptive fidelity switching between low-fidelity analytical models and high-fidelity CFD approximations.
-    </p>
-    <div class="project-features">
-        <h4>Key Achievements:</h4>
-        <ul>
-            <li>85.7% computational cost reduction compared to high-fidelity-only approaches</li>
-            <li>99.5% solution accuracy exceeding 90% industry threshold requirement</li>
-            <li>100% test coverage with comprehensive validation across 67 test cases</li>
-            <li>NASA/AIAA compliant framework for aerospace industry standards</li>
-            <li>Production-deployed and ready for real-world aerospace applications</li>
-        </ul>
-    </div>
-    <div class="project-results">
-        <h4>Technical Implementation:</h4>
-        <ul>
-            <li>Multi-fidelity simulation framework with adaptive switching logic</li>
-            <li>Multiple optimization algorithms (GA, PSO, Bayesian, NSGA-II)</li>
-            <li>Uncertainty quantification and robust optimization methods</li>
-            <li>Aerospace applications: aircraft design, spacecraft mission planning</li>
-            <li>Professional visualization and comprehensive data management</li>
-        </ul>
-    </div>
-    <div class="project-links">
-        <a href="https://github.com/Abhishek282001Tiwari/Adaptive_Multi-Fidelity_Simulation-Based_Optimization_for_Aerospace_Systems" class="project-link">View Code</a>
-        <a href="https://github.com/Abhishek282001Tiwari/Adaptive_Multi-Fidelity_Simulation-Based_Optimization_for_Aerospace_Systems/blob/main/README.md" class="project-link">Documentation</a>
-        <a href="https://abhishek282001tiwari.github.io/Adaptive_Multi-Fidelity_Simulation-Based_Optimization_for_Aerospace_Systems/downloads/" class="project-link">Live Demo</a>
+        <a href="https://github.com/Tani843/Hessian_Aware_Sampling_in_High_Dimensions" class="project-link">View Code</a>
+        <a href="https://github.com/Tani843/Hessian_Aware_Sampling_in_High_Dimensions/blob/main/README.md" class="project-link">Documentation</a>
+        <a href="https://tani843.github.io/Hessian_Aware_Sampling_in_High_Dimensions/" class="project-link">Live Demo</a>
     </div>
 </div>
 
 ---
 
-*Interested in collaborating on any of these projects? [Get in touch](mailto:abhishekt282001@gmail.com) to discuss potential partnerships or research opportunities.*
+*Interested in collaborating on any of these projects? [Get in touch](tanishagupta008@gmail.com) to discuss potential partnerships or research opportunities.*
 
 <style>
 .project {
