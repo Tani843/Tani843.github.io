@@ -54,7 +54,7 @@ Published research projects with full codebase availability. Each implementation
 <div class="project featured">
     <div class="project-header">
         <h3>Mixed-Precision Multigrid Solvers for PDEs</h3>
-        <span class="project-status">Research Implementation</span>
+     
     </div>
     <div class="project-meta">
         <span class="project-tech">Python • Multigrid Methods • Mixed Precision • Scientific Computing</span>
@@ -93,7 +93,7 @@ Published research projects with full codebase availability. Each implementation
 <div class="project featured">
     <div class="project-header">
         <h3>Hessian-Aware Sampling in High Dimensions</h3>
-        <span class="project-status">Research Implementation</span>
+        
     </div>
     <div class="project-meta">
         <span class="project-tech">Python • MCMC • Hessian-Based Preconditioning • High-Dimensional Sampling</span>
