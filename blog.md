@@ -35,6 +35,9 @@ Writing about applied mathematics, scientific computing, and the personal journe
     </div>
 </div>
 
+
+*Interested in a specific topic or potential collaboration? <a href="mailto:tanishagupta008@gmail.com">Get in touch</a>.  
+You can also explore my long-form reflections and research journey on <a href="https://medium.com/@tanishagupta008" target="_blank">Medium</a>.*
 ---
 
 <style>
