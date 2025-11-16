@@ -1,35 +1,35 @@
 %-----------------------------------------------------------------------------------------------------------------------------------------------%
-%	The MIT License (MIT)
+%The MIT License (MIT)
 %
-%	Copyright (c) 2021 Jitin Nair
+%Copyright (c) 2021 Jitin Nair
 %
-%	Permission is hereby granted, free of charge, to any person obtaining a copy
-%	of this software and associated documentation files (the "Software"), to deal
-%	in the Software without restriction, including without limitation the rights
-%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-%	copies of the Software, and to permit persons to whom the Software is
-%	furnished to do so, subject to the following conditions:
-%	
-%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-%	THE SOFTWARE.
-%	
+%Permission is hereby granted, free of charge, to any person obtaining a copy
+%of this software and associated documentation files (the "Software"), to deal
+%in the Software without restriction, including without limitation the rights
+%to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%copies of the Software, and to permit persons to whom the Software is
+%furnished to do so, subject to the following conditions:
+%
+%THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%THE SOFTWARE.
+%
 %
 %-----------------------------------------------------------------------------------------------------------------------------------------------%
 
 %----------------------------------------------------------------------------------------
-%	DOCUMENT DEFINITION
+%DOCUMENT DEFINITION
 %----------------------------------------------------------------------------------------
 
 % article class because we want to fully customize the page and not use a cv template
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,10pt]{article}
 
 %----------------------------------------------------------------------------------------
-%	FONT
+%FONT
 %----------------------------------------------------------------------------------------
 
 % % fontspec allows you to use TTF/OTF fonts directly
@@ -45,23 +45,34 @@
 % {Fontin.otf}
 
 %----------------------------------------------------------------------------------------
-%	PACKAGES
+%PACKAGES
 %----------------------------------------------------------------------------------------
 \usepackage{url}
-\usepackage{parskip} 	
+\usepackage{parskip} 
 
 %other packages for formatting
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9]{geometry}
-
-%tabularx environment
+\usepackage[scale=0.92, top=1.2cm, bottom=1.3cm]{geometry}
+% give TeX room to avoid overflow
 \usepackage{tabularx}
-
-%for lists within experience section
 \usepackage{enumitem}
+\usepackage{supertabular}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage[unicode]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\usepackage{fontawesome5}
+%for lists within experience section
 
+\usepackage[UKenglish]{babel}
+\usepackage{microtype}               % smarter line breaking
+\usepackage{enumitem}                % control list spacing/indent
+\setlist[itemize]{leftmargin=*, labelsep=0.35em, itemsep=0.2em, topsep=0.2em}
+\setlength{\emergencystretch}{3em}   % give TeX room to avoid overflow
 % centered version of 'X' col. type
 \newcolumntype{C}{>{\centering\arraybackslash}X} 
 
@@ -72,7 +83,7 @@
 \setlength{\fullcollw}{0.47\textwidth}
 
 %custom \section
-\usepackage{titlesec}				
+\usepackage{titlesec}
 \usepackage{multicol}
 \usepackage{multirow}
 
@@ -86,8 +97,6 @@
 
 %Setup hyperref package, and colours for links
 \usepackage[unicode, draft=false]{hyperref}
-\definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
 \addbibresource{citations.bib}
 \setlength\bibitemsep{1em}
 
@@ -98,33 +107,32 @@
 %\usepackage{showframe}
 
 
-% job listing environments
-\newenvironment{jobshort}[2]
-    {
-    \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
-    \end{tabularx}
-    }
-    {
-    }
+% ---------------- job listing environments (fixed) ----------------
+\newenvironment{jobshort}[2]{%
+  \noindent
+  \begin{tabularx}{\textwidth}{@{}Xr@{}}
+    \textbf{#1} & \textit{#2} \\
+  \end{tabularx}\par\vspace{-2pt}%
+}{%
+  \vspace{2pt}%
+}
 
-\newenvironment{joblong}[2]
-    {
-    \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
-    \end{tabularx}
-    \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
-    }
-    {
-    \end{itemize}
-    \end{minipage}    
-    }
+\newenvironment{joblong}[2]{%
+  \noindent
+  \begin{tabularx}{\textwidth}{@{}Xr@{}}
+    \textbf{#1} & \textit{#2} \\
+  \end{tabularx}\par\vspace{-4pt}%
+  \begin{itemize}[leftmargin=1.1em, itemsep=3pt, topsep=2pt, label=--]%
+  \raggedright
+}{%
+  \end{itemize}\vspace{2pt}%
+}
+% ------------------------------------------------------------------
 
 
 
 %----------------------------------------------------------------------------------------
-%	BEGIN DOCUMENT
+%BEGIN DOCUMENT
 %----------------------------------------------------------------------------------------
 \begin{document}
 
@@ -132,21 +140,21 @@
 \pagestyle{empty} 
 
 %----------------------------------------------------------------------------------------
-%	TITLE
+%TITLE
 %----------------------------------------------------------------------------------------
 
 % \begin{tabularx}{\linewidth}{ @{}X X@{} }
 % \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
 % \raisebox{-0.05\height}\faGithub\ username \ | \
-% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com& \hfill \emoji{calling} number
 % \end{tabularx}
 
 \begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Abhishek Tiwari} \\[7.5pt]
-\href{https://github.com/Abhishek282001Tiwari}{\raisebox{-0.05\height}\faGithub\ GitHub} \ $|$ \ 
-\href{www.linkedin.com/in/abhishek282001}{\raisebox{-0.05\height}\faLinkedin\ Linkedin} \ $|$ \ 
-\href{mailto:abhishekt282001@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ abhishekt282001@gmail.com} \ $|$ \ 
-\href{tel:+000000000000}{\raisebox{-0.05\height}\faMobile \ +91 8421960019}\\
+\Huge{Tanisha Gupta} \\[7.5pt]
+\href{https://github.com/Tani843}{\raisebox{-0.05\height}\faGithub\ GitHub} \ $|$ \ 
+\href{https://www.linkedin.com/in/tanishagupta008/?skipRedirect=true}{\raisebox{-0.05\height}\faLinkedin\ Linkedin} \ $|$ \ 
+\href{mailto:tanishagupta008@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ tanishagupta008@gmail.com} \ $|$ \ 
+\href{tel:+000000000000}{\raisebox{-0.05\height}\faMobile \ +44 7920596811}\\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
@@ -154,103 +162,140 @@
 %----------------------------------------------------------------------------------------
 
 %Interests/ Keywords/ Summary
-\section{Summary}
-Independent Researcher in Quantitative Finance and Artificial Intelligence with expertise in market microstructure, high-frequency trading, stochastic control, and machine learning. Experienced in developing Hawkes process models, optimal execution frameworks, and simulation-based optimization engines for complex financial and aerospace systems. Strong background in reinforcement learning, Bayesian methods, and interpretable AI, with multiple working papers and preprints under review. Seeking research or applied AI/quant positions to advance robust, explainable, and high-performance computational solutions in finance and optimization.
-
+\section{Professional Summary}
+Applied Mathematician with research experience in Bayesian inverse problems, uncertainty quantification, and
+statistical learning theory. Skilled in developing PAC-Bayesian frameworks for PDE-governed systems, high-
+performance numerical solvers, and Hessian-aware sampling for large-scale inference. Currently a Research Assistant at
+the Mathematics Laboratory, University of Delhi, focusing on finite-sample generalization bounds for inverse heat equations.
+Previous experience as a Business Intelligence Analyst at Allpay Ltd (UK) building SQL–Power BI analytics pipelines.
+Research interests include Bayesian inference, stochastic optimization, and scientific machine learning.
 %Experience
-\section{Work Experience}
+%-------------------------------------
+\section*{Work Experience}
 
-\begin{joblong}{Business Intelligence Analyst, Allpay Ltd, Hereford, UK}{February 2024 -- Present}
-\item Developed ML-driven pipelines and optimization projects for fintech/payments, generating data-driven insights.
-\item Designed and maintained interactive dashboards and visualizations to support operational and strategic functions.
-\item Applied advanced analytics and predictive modeling to improve product performance and operational efficiency.
+\begin{joblong}{Research Assistant — Mathematics Laboratory, Janki Devi Memorial College (University of Delhi), India}{March 2025 -- Present}
+    \item Conducting research on Bayesian inverse problems and uncertainty quantification, focusing on the PAC-Bayes framework for PDE-governed systems.
+    \item Developed and validated finite-sample generalization bounds for the inverse heat equation, integrating Bayesian inference with statistical learning theory.
+    \item Designed mesh-robust numerical solvers for reliable posterior estimation in high-dimensional inverse problems.
+    \item Collaborating with faculty on manuscripts submitted to SIAM/ASA Journal on Uncertainty Quantification and related applied mathematics venues.
+    \item Mentoring undergraduate students on computational mathematics and statistical inference projects.
 \end{joblong}
 
-\begin{joblong}{Research Assistant, University of Liverpool, UK}{Oct 2023 -- Sep 2024}
-\item Conducted AI and computational modeling research in stochastic processes, reinforcement learning, and graph-based methods.
-\item Implemented Python-based simulations and ML models for quantitative analyses and system optimization.
-\item Contributed to manuscript preparation, preprints, and academic publications in AI and interpretable modeling.
+\begin{joblong}{Business Intelligence Analyst — Allpay Ltd, Hereford, United Kingdom}{April 2025 -- 11 November 2025}
+    \item Built end-to-end SQL–Power BI pipelines for high-frequency financial payment systems, automating validation and reconciliation workflows.
+    \item Designed and maintained star-schema data models linking transactional, compliance, and operational datasets for KPI analytics.
+    \item Developed Power BI and SSRS reports monitoring payment success, login activity, and support metrics with improved data reliability.
+    \item Authored optimized SQL stored procedures and parameterized queries to enhance reporting efficiency and accuracy.
+    \item Partnered with finance and product teams to deliver analytical insights driving strategic and regulatory decisions.
 \end{joblong}
-  
-%Projects
+
+\begin{joblong}{Junior Research Data Assistant — AI \& Machine Learning Lab, University of Liverpool, UK}{August 2024 -- April 2025}
+    \item Researched verification frameworks for Deep Reinforcement Learning (DRL) models, emphasizing algorithmic safety and robustness.
+    \item Designed Lyapunov Barrier Certificate-based methods reducing instability in DRL controllers by 20\%.
+    \item Conducted over 50 experiments improving model generalization and convergence behavior.
+    \item Tuned deep-learning hyperparameters to reduce false positives by 15\% and contributed to peer-reviewed AI journal submissions.
+    \item Tools: Python (PyTorch, TensorFlow, Scikit-learn), MATLAB, AWS, SQL, Power BI.
+\end{joblong}
+%-------------------------------------
+%-------------------------------------
+%---------------------------------------------------------
 \section{Projects}
+
+% ---------------------- PROJECT 1 ----------------------
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Multi-Regime Climate-Financial Risk Transmission Engine} & \hfill \href{https://github.com/Abhishek282001Tiwari/Multi_Regime_Climate_Financial_Risk_Transmission_Engine}{GitHub Link} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{Developed an econometric engine modeling climate-financial risk transmission using Hamilton’s Markov regime-switching model with climate extensions. Includes 9+ years of empirical data, interactive dashboards, and reproducible code for real-time stress testing and risk analysis.} \\
+\textbf{PAC-Bayes Certificates for Bayesian Inverse Problems: A Case Study on the Heat Equation}
+& \hfill \href{https://github.com/Tani843/PAC_BAYES_INVERSE_PDE}{GitHub Link} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+Implements \textbf{PAC-Bayes certified uncertainty} for Bayesian inverse PDEs on the 1D heat equation. 
+Provides finite-sample generalization bounds, a mesh-robust decomposition of error, Gibbs/tempered posterior implementation, and a complete, reproducible experiment pipeline (data generation → posterior sampling → certificate computation).
+} \\
 \end{tabularx}
 
+\vspace{6pt}
+
+% ---------------------- PROJECT 2 ----------------------
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Quantum-Inspired Portfolio Optimization Platform} & \hfill \href{https://github.com/Abhishek282001Tiwari/Quantum_Inspired_Portfolio_Optamization}{GitHub Link} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{Built a research-grade framework applying quantum algorithms (QAOA, VQE, Quantum Annealing) to portfolio optimization. Benchmarked against classical models (Markowitz, Black-Litterman, HRP) with extensions to multi-objective, cardinality, and transaction cost optimization. Includes scalability and noise-resilience studies.} \\
+\textbf{Mixed-Precision Multigrid Solvers for PDEs}
+& \hfill \href{https://github.com/Tani843/Mixed_Precision_Multigrid_Solvers_for_PDEs}{GitHub Link} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+High-performance multigrid framework with adaptive mixed precision and CUDA acceleration. 
+Demonstrates up to \textbf{6.6× GPU speedup} vs. CPU, \textbf{1.7× mixed-precision gain} with \textbf{35\% lower memory}, and verified \(O(h^2)\) convergence. 
+Includes benchmarks, visualization tools, and comprehensive tests.
+} \\
 \end{tabularx}
 
+\vspace{6pt}
+
+% ---------------------- PROJECT 3 ----------------------
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Cross-Venue Hawkes Process Model} & \hfill \href{https://github.com/Abhishek282001Tiwari/crossvenue_hawkes}{GitHub Link} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{Designed a multivariate Hawkes process model with cross-venue graph structure for high-frequency 
-order flow prediction. Implements real-time particle filter calibration and GNN-based excitation modeling, with 
-profitability demonstrations on multi-exchange tick and order book data. \textit{(Work in Progress)}} \\
+\textbf{Hessian Aware Sampling in High Dimensions}
+& \hfill \href{https://github.com/Tani843/Hessian_Aware_Sampling_in_High_Dimensions}{GitHub Link} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+Hessian-informed MCMC samplers (Metropolis, Langevin, adaptive variants) for efficient exploration of high-dimensional posteriors. 
+Achieves \textbf{2–10× ESS improvements} on ill-conditioned targets, robust to \( d > 10^3 \). 
+Ships with benchmarks, diagnostics, and publication-quality plotting utilities.
+} \\
 \end{tabularx}
 
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Neurologicx Terminal (Neurosymbolic AI)} & \hfill \href{https://github.com/Abhishek282001Tiwari/neurologicx_terminal}{GitHub Link} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{Developing a modular, terminal-style neurosymbolic reasoning system with Python backend and Streamlit deployment. Combines NLP parsing, symbolic program synthesis, and interpretable reasoning pipelines. } \\
-\end{tabularx}
 %----------------------------------------------------------------------------------------
-%	EDUCATION
+%EDUCATION
 %----------------------------------------------------------------------------------------
+%-------------------------------------
 \section{Education}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
+%-------------------------------------
 
-2022 -- 2023 & \textbf{University of Liverpool}, United Kingdom \\
-             & Post Graduate Diploma in Finance \& Investment Management \hfill GPA: 3.65/4.00 \\
-             & Dissertation: \textit{The Impact of Mergers and Acquisitions on Firm Financial Performance: A Quantitative Analysis Using Mathematical Modeling and Python} \\[8pt]
+\begin{tabularx}{\textwidth}{@{}l X@{}}
 
-2018 -- 2021 & \textbf{G.C. University}, India \\
-             & Bachelor of Business Administration (BBA) \hfill GPA: 3.80/4.00 \\
-             & Dissertation: \textit{Mathematical and Computational Approaches to Financial Performance Analysis: An Empirical Study Using Python} \\
+2023 -- 2024 &
+\textbf{University of Liverpool, United Kingdom} \\
+& Master of Science in Data Science \& Artificial Intelligence \hfill \textbf{Distinction} \\
+& Relevant Coursework: Deep Learning, Natural Language Processing, Reinforcement Learning, Big Data, Cloud Computing, Bayesian Statistics, Optimisation Methods, Data Visualisation. \\[6pt]
+
+2019 -- 2022 &
+\textbf{Janki Devi Memorial College (University of Delhi), India} \\
+& Bachelor of Science (Honours) in Mathematics \hfill \textbf{GPA: 3.6/4.0} \\
+& Relevant Coursework: Probability \& Statistics, Computational Modelling, Linear Algebra, Numerical Analysis. \\
 
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
-%	PUBLICATIONS
+%PUBLICATIONS
 %----------------------------------------------------------------------------------------
 \section{Publications}
 \begin{enumerate}[leftmargin=*]
-  \item Abhishek Pankaj Tiwari. 
-  \textit{A Modular Neurosymbolic Framework for General-Purpose Reasoning: Bridging Symbolic and Deep Learning for Interpretable AI}. 
-  TechRxiv, July 2025. 
-  \href{https://doi.org/10.36227/techrxiv.175295182.20276969/v1}{DOI link}. 
-  (Preprint, under review).
-  \begin{itemize}
-      \item \textbf{Methodological novelty:} Introduces a modular neurosymbolic reasoning pipeline integrating symbolic program synthesis with deep learning for interpretable general-purpose reasoning.
-  \end{itemize}
-  
-  \item Abhishek Pankaj Tiwari.  
-  \textit{Optimal Execution under Self-Exciting Order Flow: A Stochastic Control Framework}.  
-  Manuscript in preparation. (Working paper).  
-  \begin{itemize}
-      \item \textbf{Methodological novelty:} Develops a stochastic control framework that integrates Hawkes process–based self-exciting order flow with optimal execution models, capturing endogenous market impact and feedback effects in high-frequency trading environments.
-  \end{itemize}
+
+\item Tanisha Gupta . 
+\textit{PAC-Bayes Certificates for Bayesian Inverse Problems: A Case Study on the Heat Equation}. 
+TechRxiv, July 2025. 
+\href{https://doi.org/10.36227/techrxiv.176170993.37005709/v1}{DOI link}. 
+(Preprint, under peer review at \textit{SIAM Journal on Uncertainty Quantification}).
+
+\begin{itemize}
+\item \textbf{Methodological novelty:} Introduces the first PAC-Bayesian generalization certificates for Bayesian inverse partial differential equations, combining Gibbs posteriors and tempered Bayesian inference to provide finite-sample, mesh-robust generalization guarantees for inverse-PDE uncertainty quantification.
+\end{itemize}
+
 \end{enumerate}
 
 %----------------------------------------------------------------------------------------
-%	SKILLS
-%----------------------------------------------------------------------------------------
-\section{Skills}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-Programming & \normalsize{Python (NumPy, SciPy, PyTorch, JAX), C++ (11/14), MATLAB, Julia, CUDA, MPI, Git, kdb+/q, SQL} \\
-\\
-Machine Learning & \normalsize{Bayesian ML, deep learning for sequential data, reinforcement learning (safe \& distributional), graph neural networks, hidden Markov models, regime detection} \\
-\\
-Stochastic Processes \& Control & \normalsize{Hawkes and point processes, stochastic calculus, stochastic differential equations, stochastic control (HJB, dynamic programming), optimal execution (Almgren–Chriss, mean-field models)} \\
-\\
-Optimization \& Simulation & \normalsize{Simulation-based optimization, convex/non-convex optimization, robust optimization, Monte Carlo methods (variance reduction, importance sampling), PDE solvers (finite difference, Crank–Nicolson)} \\
-\\
-Market Microstructure & \normalsize{Limit order book modeling, high-frequency forecasting, market impact models, statistical arbitrage, liquidity and volatility estimation, order flow prediction} 
-\end{tabularx}
+%SKILLS
+%---------------------------------------------------------------------
+\section{Key Skills}
 
-\vfill
-\center{\footnotesize Last updated: \today}
+\begin{itemize}
+    \item \textbf{Mathematical \& Statistical Modelling:} Bayesian inference, PAC-Bayesian analysis, uncertainty quantification, inverse problems, stochastic optimization, Monte Carlo \& MCMC methods, PDE-constrained optimization.
+    \item \textbf{Numerical \& Computational Methods:} Finite-difference \& finite-element solvers, Crank–Nicolson schemes, multigrid \& Krylov methods, Hessian-aware sampling, CUDA-based high-performance computing.
+    \item \textbf{Programming \& Scientific Computing:} Python (NumPy, SciPy, PyTorch, TensorFlow), MATLAB, R, SQL, LaTeX, Git, Linux, CUDA, Power BI for scientific visualisation.
+    \item \textbf{Machine Learning \& AI Foundations:} Statistical learning theory, reinforcement learning (safe \& constrained), neural-symbolic reasoning, model interpretability, optimization-based learning.
+    \item \textbf{Research Communication \& Reproducibility:} Technical writing, GitHub reproducible pipelines, academic presentations, interdisciplinary collaboration.
+\end{itemize}
 
+%---------------------------------------------------------
+\section{Certifications \& Technical Achievements}
+
+\begin{itemize}
+    \item \textbf{AI \& Machine Learning Specialization (Coursera)} — Advanced foundation in AI algorithms, optimization, and model deployment.
+    \item \textbf{Data Science with R} — Advanced certification in statistical computing and regression modelling (SimpliLearn).
+    \item \textbf{Cloud Data Engineering (AWS, GCP)} — Experience with BigQuery, Spark, and distributed computation environments.
+    \item \textbf{AI-Powered Fraud Detection Model} — Built ML pipelines reducing false positives by 25\%, demonstrating applied statistical inference.
+\end{itemize}
 \end{document}
-
