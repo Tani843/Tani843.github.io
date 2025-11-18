@@ -13,32 +13,32 @@ permalink: /research/
     </div>
     
     <div class="project-meta">
-        <span class="project-tech">Applied Mathematics • Scientific Computing • PAC-Bayesian Learning</span>
+        <span class="project-tech">Numerical Analysis • Scientific Computing • PAC-Bayesian Inference</span>
     </div>
     
     <p class="project-description">
-        My research is centered on <strong>Bayesian inverse problems</strong> and <strong>uncertainty quantification</strong> for systems governed by <strong>partial differential equations (PDEs)</strong>. I am particularly interested in developing <em>PAC-Bayesian generalization frameworks</em> for PDE-based inverse problems, providing finite-sample guarantees on predictive error and bridging modern learning theory with classical numerical analysis.
+        My research lies at the intersection of <strong>Bayesian inverse problems</strong>, <strong>numerical analysis</strong>, and <strong>scientific computing</strong>. I study how uncertainty propagates through <strong>partial differential equation (PDE)</strong> models and develop frameworks that deliver <strong>finite-sample guarantees</strong> for inverse solutions. A central theme of my work is the use of <em>PAC-Bayesian learning theory</em> to quantify how discretization, mesh refinement, and solver approximations affect generalization behaviour in PDE-based inference.
     </p>
 
     <div class="project-features">
         <h4>The Challenge with Bayesian Inversion</h4>
         <ul>
-            <li><strong>Ill-posedness:</strong> small perturbations in noisy data can lead to large changes in inferred parameters.</li>
-            <li><strong>High-dimensional posteriors:</strong> PDE-based models often require estimating spatially varying fields or many parameters, making sampling and inference computationally expensive.</li>
-            <li><strong>Lack of finite-sample guarantees:</strong> classical Bayesian methods yield credible intervals, but rarely provide <em>distribution-free</em> guarantees on predictive error for new observations.</li>
-            <li><strong>Mesh and discretization effects:</strong> numerical choices (grid size, time step) can significantly affect posterior behavior and stability.</li>
+            <li><strong>Ill-posedness:</strong> small perturbations in noisy data can produce large deviations in inferred model parameters, especially in PDE-governed systems.</li>
+            <li><strong>High-dimensional posteriors:</strong> PDE-based models often involve spatially distributed unknowns, creating computational challenges for inference and sampling.</li>
+            <li><strong>No finite-sample guarantees:</strong> classical Bayesian analysis provides credible regions but rarely offers <em>distribution-free, sample-dependent</em> bounds on predictive error.</li>
+            <li><strong>Discretization sensitivity:</strong> choices such as grid resolution, time-stepping, and solver accuracy can significantly distort posterior shape and stability.</li>
         </ul>
     </div>
 
     <div class="project-results">
         <h4>Why This Matters</h4>
-        <p>These challenges appear in many real-world systems:</p>
+        <p>The need for <strong>trustworthy, reproducible</strong> inference arises across many scientific and engineering domains:</p>
         <ul>
-            <li><strong>Heat and diffusion processes:</strong> inferring thermal conductivity or diffusion coefficients from sparse temperature measurements.</li>
-            <li><strong>Subsurface and environmental modelling:</strong> determining material properties of soil or rock from indirect data.</li>
-            <li><strong>Engineering and medical applications:</strong> reconstructing internal structures from boundary or sensor observations.</li>
+            <li><strong>Heat and diffusion processes:</strong> reconstructing conductivity or diffusivity from sparse or noisy measurements.</li>
+            <li><strong>Subsurface and environmental modelling:</strong> estimating underground properties from boundary data.</li>
+            <li><strong>Engineering and biomedical applications:</strong> recovering internal structures using sensor or boundary observations.</li>
         </ul>
-        <p>In such settings, we need methods that are not only accurate, but also come with <strong>provable guarantees</strong> on how well the inferred model will generalize to new data.</p>
+        <p>PDE-based models power these systems, but accurate solutions alone are not enough. We need methods with <strong>provable guarantees</strong>—methods that quantify how well the inferred solution will generalize to new data and how numerical choices influence uncertainty.</p>
     </div>
 </div>
 
@@ -50,20 +50,20 @@ permalink: /research/
 
     <div class="project-features">
         <h4>1. PAC-Bayesian Certificates for Inverse PDE Problems</h4>
-        <p>I am developing a PAC-Bayesian framework for <strong>PDE-governed inverse problems</strong>, starting with the one-dimensional heat equation as a case study. The goal is to derive risk bounds that connect posterior distributions to out-of-sample prediction error in a mesh-robust way.</p>
-        <p><strong>Key Question:</strong> How can we obtain <em>finite-sample, distribution-free</em> guarantees for Bayesian inverse solutions in infinite-dimensional or high-dimensional PDE settings?</p>
+        <p>I am developing a <strong>PAC-Bayesian generalization framework</strong> for inverse problems constrained by PDEs. Starting with the one-dimensional heat equation, I derive <strong>mesh-robust risk bounds</strong> that connect posterior uncertainty to out-of-sample predictive error. This provides a new perspective for uncertainty quantification that unifies <em>learning theory</em> with <em>classical PDE analysis</em>.</p>
+        <p><strong>Key Question:</strong> Can we develop <em>finite-sample, distribution-free</em> guarantees for posterior stability in high-dimensional or infinite-dimensional PDE settings?</p>
     </div>
 
     <div class="project-features">
         <h4>2. Numerical Methods for High-Dimensional Posteriors</h4>
-        <p>I am interested in numerical strategies that make Bayesian inversion more tractable, including Laplace approximations, Hessian-aware sampling, and careful discretization strategies that control the effect of mesh refinement on posterior behavior.</p>
-        <p><strong>Key Question:</strong> What combinations of numerical solvers and approximate inference schemes yield stable, reliable posteriors with controllable error in practical computation time?</p>
+        <p>I design numerical strategies that make Bayesian inversion computationally feasible. This includes <strong>Laplace approximations</strong>, <strong>Hessian-aware sampling</strong>, and <strong>discretization-aware inference schemes</strong> that quantify how numerical error affects posterior accuracy.</p>
+        <p><strong>Key Question:</strong> What combinations of solvers, discretization choices, and approximate inference methods yield posteriors that are both stable and computationally efficient?</p>
     </div>
 
     <div class="project-features">
-        <h4>3. Scientific Machine Learning & PDE-Constrained Learning</h4>
-        <p>Longer-term, I aim to explore hybrid approaches that combine physics-based PDE models with data-driven components, while retaining rigorous uncertainty quantification and theoretical guarantees.</p>
-        <p><strong>Key Question:</strong> How can we design learning algorithms that respect physical structure, provide calibrated uncertainty, and come with PAC-style generalization guarantees?</p>
+        <h4>3. Scientific Machine Learning & Physics-Constrained Learning</h4>
+        <p>I am exploring hybrid approaches that merge data-driven learning with PDE-constrained structure while preserving interpretability and uncertainty guarantees. My aim is to incorporate <strong>physical laws</strong> and <strong>numerical consistency</strong> into learning models without sacrificing rigorous error control.</p>
+        <p><strong>Key Question:</strong> How can we design learning algorithms that respect PDE structure, provide calibrated uncertainty, and satisfy PAC-style generalization bounds?</p>
     </div>
 </div>
 
@@ -74,23 +74,24 @@ permalink: /research/
     </div>
     
     <p class="project-description">
-        As computational models become more complex and central to decision-making, the ability to <strong>trust</strong> their predictions becomes critical. My research vision is to build a bridge between <strong>learning theory</strong>, <strong>Bayesian statistics</strong>, and <strong>scientific computing</strong>, so that PDE-based models come with interpretable uncertainty and provable performance guarantees.
+        My long-term vision is to build a unified theory that connects <strong>learning-theoretic guarantees</strong> with <strong>numerical stability</strong> in PDE-based inference. Scientific simulations guide decisions in engineering, climate modelling, physics, and medicine — yet their uncertainty is often difficult to interpret or trust. I aim to create computational frameworks where <strong>accuracy, uncertainty, and generalization are mathematically linked</strong>.
     </p>
 
     <div class="project-features">
         <h4>Research Objectives</h4>
         <ul>
-            <li><strong>Rigorous Uncertainty Quantification</strong> – developing methods that provide mathematically sound bounds on predictive risk for Bayesian inverse problems.</li>
-            <li><strong>Scalable Algorithms</strong> – designing numerical and probabilistic techniques that remain practical for high-dimensional and mesh-refined PDE systems.</li>
-            <li><strong>Physics-Aware Learning</strong> – integrating physical constraints and PDE structure into learning algorithms without sacrificing theoretical guarantees.</li>
+            <li><strong>Rigorous Uncertainty Quantification</strong> – deriving mathematically sound generalization bounds for inverse problems governed by PDEs.</li>
+            <li><strong>Scalable Numerical Algorithms</strong> – developing methods that remain efficient for high-dimensional, mesh-refined, or computationally intensive PDE systems.</li>
+            <li><strong>Physics-Structured Learning</strong> – integrating PDE constraints and numerical structure into data-driven algorithms while maintaining theoretical guarantees.</li>
         </ul>
     </div>
+
 <div class="project-results">
     <h4>Long-term Impact</h4>
     <p>
-        My long-term research goal is to develop mathematically rigorous and computationally scalable frameworks for Bayesian inference and uncertainty quantification in complex scientific systems. I aim to contribute to a new class of reliable scientific models that remain stable under discretization, provide provable generalization guarantees, and integrate seamlessly with large-scale PDE-based simulations.
+        My long-term goal is to shape a new class of computational methods for Bayesian inference: methods that remain stable under discretization, that scale to high-dimensional settings, and that come with <strong>provable generalization guarantees</strong>. I aspire to advance the mathematical foundations needed for transparent, reproducible, and high-confidence decision-making in noisy, high-dimensional, and scientifically complex environments.
         <br><br>
-        At a broader level, my work is motivated by the need for trustworthy computational tools in science and engineering—methods that combine statistical robustness with numerical precision. I aspire to advance the theoretical foundations and practical algorithms that enable transparent, reproducible, and high-confidence decision-making in high-dimensional, noisy, and uncertain environments.
+        Ultimately, my vision is to establish a rigorous bridge between <strong>numerical analysis</strong>, <strong>PDE-based modelling</strong>, and <strong>learning theory</strong>, enabling trustworthy scientific computing for the next generation of data-informed simulations.
     </p>
 </div>
 </div>
