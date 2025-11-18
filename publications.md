@@ -37,7 +37,7 @@ Peer-reviewed research papers and preprints in Bayesian Inverse Problems, Uncert
     </p>
     <div class="pub-links">
         <a href="https://doi.org/10.36227/techrxiv.176170993.37005709/v1" class="pub-link">Paper</a>
-        <<a href="https://github.com/Tani843/PAC_BAYES_INVERSE_PDE" class="pub-link">Code</a>
+        <<a href="https://github.com/Tani843/PAC_BAYES_INVERSE_PDE." class="pub-link">Code</a>
         <a href="https://scholar.google.com/citations?user=QYQqZZgAAAAJ&hl=en" class="pub-link">Google Scholar</a>
     </div>
     <div class="pub-tags">
