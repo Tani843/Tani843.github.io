@@ -45,8 +45,8 @@ Published research projects with full codebase availability. Each implementation
         </ul>
     </div>
     <div class="project-links">
-        <a href="https://github.com/Tani843/PAC_BAYES_INVERSE_PDE" class="project-link">View Code</a>
-        <a href="https://github.com/Tani843/PAC_BAYES_INVERSE_PDE/blob/main/README.md" class="project-link">Documentation</a>
+        <a href="https://github.com/Tani843/PAC_BAYES_INVERSE_PDE." class="project-link">View Code</a>
+        <a href="https://github.com/Tani843/PAC_BAYES_INVERSE_PDE./blob/main/README.md" class="project-link">Documentation</a>
         <a href="https://doi.org/10.36227/techrxiv.176170993.37005709/v1" class="project-link">Research Paper</a>
     </div>
 </div>
